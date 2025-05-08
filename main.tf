@@ -42,7 +42,7 @@ module "image_lambda" {
   handler               = "lambda_function.lambda_handler"
   runtime               = "python3.9"
   role_arn              = module.lambda_role.role_arn
-  lambda_package        = "./lambda/image_resize_function.zip"
+  lambda_package        = "./image-resizing-s3.zip"
   environment_variables = {
     SOURCE_BUCKET = module.source_bucket.bucket_name
     DEST_BUCKET   = module.destination_bucket.bucket_name
