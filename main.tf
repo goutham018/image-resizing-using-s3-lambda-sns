@@ -20,9 +20,11 @@ module "destination_bucket" {
 
 # SNS Topic for notifications
 module "sns_topic" {
-  source = "./modules/sns_topic"
-  name   = "image-resizing-topic"
+  source             = "./modules/sns_topic"
+  name               = "image-resizing-topic"
+  notification_email = "gouthamr522@gmail.com"
 }
+
 
 # IAM Role for Lambda
 module "lambda_role" {
